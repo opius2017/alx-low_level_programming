@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * rev_string - reverses a string
  * _putchar - print each character
@@ -7,6 +8,7 @@
  * Description: This will reverse a string
  * Return: 0 is success
  */
+
 void rev_string(char *s)
 {
 	int a = 0, b, c;
@@ -16,6 +18,7 @@ void rev_string(char *s)
 	{
 		a++;
 	}
+
 	c = a - 1;
 	for (b = 0; c >= 0 && b < c; c--, b++)
 	{

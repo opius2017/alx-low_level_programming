@@ -1,1 +1,1 @@
-ALX Low level programming
+C - Static libraries

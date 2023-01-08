@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib>
 
 /**
- * main - prints the name of the programe
+ * main - Prints the name of the program
  * followed by a new line
- * @argc: number of command-line arguements
- * @argv: string of arguement passed to the main function
- * Return : Always 0 on success
+ * @argc : number of command-line arguments
+ * @argv : string of argumenst passed to main fcn
+ * Return: Always 0 (Success)
  */
 
 int main(int __attribute__((__unused__)) argc, char *argv[])

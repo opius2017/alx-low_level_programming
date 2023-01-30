@@ -1,23 +1,52 @@
 #include "lists.h"
-#include <stdio.h>
 
-/*
- * print_listint - prints all the elements of a listint_t list
- * @h: A pointer to the head of the list_t list
+/**
+ * insert_nodeint_at_index - inserts a new node
+ * at a given position.
+ * @head: head of a list.
+ * @idx: index of the list where the new node is
+ * added.
+ * @n: integer element.
  *
- * Return: The number of nodes in the list_t list
+ * Return: the address of the new node, or NULL if it
+ * failed.
  */
 
-size_t print_listint(cons listint_t *h)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	size_t nodes = 0;
+	unsigned int i;
+	listint_t *new;
+	listint_t *h;
 
-	while (h)
+	h = *head;
+
+	if (idx != 0)
 	{
-		nodes++;
-		printf("%d\n", h->n);
-		h = h->next;
+		for (i = 0; i < idx - 1 && h != NULL; i++)
+		{
+			h = h->next;
+		}
 	}
-	return (nodes);
-}
 
+	if (h == NULL && idx != 0)
+		return (NULL);
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+
+	if (idx == 0)
+	{
+		new->next = *head;
+		*head = new;
+	}
+	else
+	{
+		new->next = h->next;
+		h->next = new;
+	}
+
+	return (new);
+}

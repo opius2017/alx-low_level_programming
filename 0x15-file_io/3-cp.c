@@ -101,7 +101,9 @@ int main(int argc, char *argv[])
 	close_file(to);
 
 	return (0);
-}#include "main.h"
+}
+
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
